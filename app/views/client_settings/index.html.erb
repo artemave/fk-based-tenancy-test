@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Client Settings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Distributor</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_settings.each do |client_setting| %>
+      <tr>
+        <td><%= client_setting.client_id %></td>
+        <td><%= client_setting.distributor_id %></td>
+        <td><%= client_setting.name %></td>
+        <td><%= link_to 'Show', client_setting %></td>
+        <td><%= link_to 'Edit', edit_client_setting_path(client_setting) %></td>
+        <td><%= link_to 'Destroy', client_setting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client Setting', new_client_setting_path %>

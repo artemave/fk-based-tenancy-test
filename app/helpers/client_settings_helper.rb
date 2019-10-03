@@ -1,0 +1,2 @@
+module ClientSettingsHelper
+end

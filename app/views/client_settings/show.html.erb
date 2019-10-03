@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distributor:</strong>
+  <%= @client_setting.distributor.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client_setting.name %>
+</p>
+
+<%= link_to 'Edit', edit_client_settings_path %> |
+<%= link_to 'Back', client_settings_path %>
